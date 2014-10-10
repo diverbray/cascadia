@@ -1,0 +1,204 @@
+using System;
+
+namespace PCE_StarterProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Conditional_Statements cs = new Conditional_Statements();
+            cs.RunExercise();
+
+            // Comparison_Operators co = new Comparison_Operators();
+            // co.RunExercise();
+
+            // IO_Operators ioo = new IO_Operators();
+            // ioo.RunExercise();
+
+            // Integer_Vs_Real_Division ivrd = new Integer_Vs_Real_Division();
+            // ivrd.RunExercise();
+
+            // Clearly, you will need to uncomment these to test them...
+            // Modulus_Operator mo = new Modulus_Operator();
+            // mo.RunExercise();
+
+            // Fahrenheit_To_Celsius ftc = new Fahrenheit_To_Celsius();
+            // ftc.RunExercise();
+        }
+    }
+
+    class Conditional_Statements
+    {
+        public void RunExercise()
+        {
+            Console.WriteLine("About to do the \"Conditional Statements\" exercise");
+            Conditional_Methods cm = new Conditional_Methods();
+            cm.UsingIf();
+            //cm.UsingElseIf();
+            cm.UsingSwitch();
+        }
+    }
+
+    class Comparison_Operators
+    {
+        public void RunExercise()
+        {
+            Console.WriteLine("Get 2 integers & store them, then compare them using <, <=, etc, etc");
+        }
+    }
+
+
+    class IO_Operators
+    {
+        public void RunExercise()
+        {
+        }
+    }
+
+    class Conditional_Methods
+    {
+        public void UsingIf()
+        {
+            //cm.UsingIf();
+            int UserChoice;
+            Console.WriteLine("Please enter your amazing score from our last quiz.");
+            Int32.TryParse(Console.ReadLine(), out UserChoice);
+
+            if (UserChoice < 0)
+            {
+                Console.WriteLine("You entered a number that is not a possible score from your quiz.");
+            }
+            else
+            {
+                if (UserChoice == 0)
+                {
+                    Console.WriteLine("You need to talk to the professor immediately!");
+                }
+                else
+                {
+                    if (UserChoice == 1)
+                    {
+                        Console.WriteLine("You need to study a lot more!");
+                    }
+                    else
+                    {
+                        if (UserChoice <= 4)
+                        {
+                            Console.WriteLine("If you keep working at this, you'll do better!");
+                        }
+                        else
+                        {
+                            if (UserChoice <= 6)
+                            {
+                                Console.WriteLine("You,ve gotten the hang of this, but with practice, I'm sure you can do even better");
+                            }
+                            else
+                            {
+                                if (UserChoice <= 8)
+                                {
+                                    Console.WriteLine("Nice job, but don't let yourself slack!");
+                                }
+                                else
+                                {
+                                    if (UserChoice == 9)
+                                    {
+                                        Console.WriteLine("Very nice job - keep up the good work!");
+                                    }
+                                    else
+                                    {
+                                        if (UserChoice == 10)
+                                        {
+                                            Console.WriteLine("Puurrrrfect!");
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("You entered a number that is not a possible score from your quiz.");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void UsingIfElse()
+        {
+
+        }
+        public void UsingSwitch()
+        {
+            //cm.Switch();
+            int UserChoice;
+            Console.WriteLine("Please enter your amazing score from our last quiz.");
+            Int32.TryParse(Console.ReadLine(), out UserChoice);
+
+            switch (UserChoice)
+            {
+                case 0:
+                    Console.WriteLine("You need to talk to the professor immediately!"); //cm.UsingSwitch();
+                    break;
+                case 1:
+                    Console.WriteLine("You need to study a lot more!");
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    Console.WriteLine("If you keep working at this, you'll do better!");
+                    break;
+                case 5:
+                case 6:
+                    Console.WriteLine("You,ve gotten the hang of this, but with practice, I'm sure you can do even better");
+                    break;
+                case 7:
+                case 8:
+                    Console.WriteLine("Nice job, but don't let yourself slack!");
+                    break;
+                case 9:
+                    Console.WriteLine("Very nice job - keep up the good work!");
+                    break;
+                case 10:
+                    Console.WriteLine("Puuurrrrrfect!");
+                    break;
+                default:
+                    if (UserChoice < 0)
+                        Console.WriteLine("You entered a negative number. Please enter a possible score.");
+
+                    else
+                        Console.WriteLine("You entered a number that is larger than is possible from your quiz.");
+                    break;
+            }
+        }
+    }
+
+
+
+    class Integer_Vs_Real_Division
+    {
+        public void RunExercise()
+        {
+        }
+    }
+
+    class Modulus_Operator
+    {
+        public void RunExercise()
+        {
+        }
+    }
+
+    class Fahrenheit_To_Celsius
+    {
+        public void RunExercise()
+        {
+        }
+    }
+
+    class Logical_Operators
+    {
+        // Your answer goes here,in a comment like this one
+
+        // Side-Note: Notice that this class has NO methods, and that it still compiles :)
+    }
+}
