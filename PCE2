@@ -6,11 +6,11 @@ namespace PCE_StarterProject
     {
         static void Main(string[] args)
         {
-            //Conditional_Statements cs = new Conditional_Statements();
-            //cs.RunExercise();
+            Conditional_Statements cs = new Conditional_Statements();
+            cs.RunExercise();
 
-            //Comparison_Operators co = new Comparison_Operators();
-            //co.RunExercise();
+            Comparison_Operators co = new Comparison_Operators();
+            co.RunExercise();
 
             IO_Operators ioo = new IO_Operators();
             ioo.RunExercise();
@@ -22,8 +22,8 @@ namespace PCE_StarterProject
             // Modulus_Operator mo = new Modulus_Operator();
             // mo.RunExercise();
 
-            // Fahrenheit_To_Celsius ftc = new Fahrenheit_To_Celsius();
-            // ftc.RunExercise();
+            Fahrenheit_To_Celsius ftc = new Fahrenheit_To_Celsius();
+            ftc.RunExercise();
         }
     }
 
@@ -246,6 +246,11 @@ namespace PCE_StarterProject
     {
         public void RunExercise()
         {
+            int UserChoice;
+            Console.WriteLine("Please enter a wonderfully accurate measurement of the kinetic energy of the air in degrees Fahrenheit.");
+            Int32.TryParse(Console.ReadLine(), out UserChoice);
+            Console.WriteLine("You entered " + UserChoice);
+            Console.WriteLine("Which is equal to " + (UserChoice - 32) / 1.8 + "in degrees Celsius.");
         }
     }
 
